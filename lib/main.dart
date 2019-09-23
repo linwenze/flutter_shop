@@ -4,8 +4,10 @@ import 'package:provide/provide.dart';
 import './provide/conter.dart';
 void main(){
   var counter=Counter();
+  var loginSave=LoginSave();
   var providers=Providers();
   providers..provide(Provider<Counter>.value(counter));
+  providers..provide(Provider<LoginSave>.value(loginSave));
   runApp(ProviderNode(child:MyApp(),providers:providers));
 }
 

@@ -5,7 +5,7 @@ class MemberPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Center( 
         child: Container(
             width: ScreenUtil().setWidth(300),
             height: ScreenUtil().setWidth(370),
@@ -43,7 +43,7 @@ class MemberPage extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(
-                              Radius.circular(ScreenUtil().setWidth(100))),
+                              Radius.circular(ScreenUtil().setWidth(35))),
                           color: Colors.pink),
                     )),
               ],
@@ -52,3 +52,56 @@ class MemberPage extends StatelessWidget {
     );
   }
 }
+
+// class FactoryWidget extends StatelessWidget {
+//   const FactoryWidget({Key key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       child: RaisedButton(
+//         child: Text('test'),
+//         onPressed: _buttonClick,
+//       ),
+//     );
+//   }
+//   void _buttonClick(){
+//     var data={
+//     "data": [
+//         {
+//             "name": 'sdsd',
+//             "num": 300
+//         }
+        
+//     ]
+// };
+// ProductList product=ProductList.fromJson(data['data']);
+// product.data.forEach((i)=>print(i.name));
+
+//   }
+// }
+
+// class Products{
+//   String name;
+//   int num;
+//   Products({
+//     this.name,
+//     this.num
+//   });
+//   factory Products.fromJson(dynamic json){
+//     return Products(
+//       name:json['name'],
+//       num:json['num'],
+//     );
+//   }
+// }
+// class ProductList{
+//   List data;
+//   ProductList(this.data);
+//   factory ProductList.fromJson(List arr){
+//     return ProductList(
+//         arr.map((i)=>Products.fromJson(i)).toList()
+//     );
+  
+//   }
+// }
